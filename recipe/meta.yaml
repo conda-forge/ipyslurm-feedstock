@@ -1,6 +1,6 @@
 {% set name = "ipyslurm" %}
-{% set version = "1.2.0" %}
-{% set hash = "9cffcc4b1ae3e1f008d2fc653c42c11e225169a514a52e65cba52b54ba8fdbc7" %}
+{% set version = "1.3.0" %}
+{% set hash = "79759f6eac4cbba0d95485b7afccabb9e886084442d7211519e08945545a1d57" %}
 
 package:
   name: {{ name|lower }}
@@ -19,15 +19,13 @@ build:
 requirements:
   build:
     - pip
-    - python >=2.7
+    - python >=3
   run:
-    - ipython
-    - ipywidgets
-    - notebook
-    - paramiko
-    - python >=2.7
-    - six
-    - tqdm
+    - ipython >=7
+    - ipywidgets >=7
+    - notebook >=5
+    - paramiko >=2
+    - python >=3
 
 test:
   imports:
