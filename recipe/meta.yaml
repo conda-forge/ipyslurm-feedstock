@@ -1,6 +1,6 @@
 {% set name = "ipyslurm" %}
-{% set version = "1.3.0" %}
-{% set hash = "79759f6eac4cbba0d95485b7afccabb9e886084442d7211519e08945545a1d57" %}
+{% set version = "1.4.0" %}
+{% set hash = "a10dd65ed98c85dac7466b604e2e3749c8b72e8fef347103b32fc2e68bc65790" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
