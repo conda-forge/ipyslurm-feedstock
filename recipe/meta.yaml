@@ -24,7 +24,7 @@ requirements:
     - ipython >=7
     - ipywidgets >=7
     - notebook >=5
-    - paramiko >=2
+    - paramiko >=2.5
     - python >=3
 
 test:
