@@ -1,6 +1,6 @@
 {% set name = "ipyslurm" %}
-{% set version = "1.5.0" %}
-{% set hash = "0c670067bab240a53f78fb03211b5645fd4871dcb7cbfea5ac55258fed852f14" %}
+{% set version = "1.6.0" %}
+{% set hash = "b6f35be39517da1b059a18980d306295e1a0d45ade94fc0ac8d7bd20e1a8596a" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - pip
     - python >=3
   run:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'IPython extension for interacting with the Slurm Workload Manager from Jupyter notebook'
+  summary: IPython extension for interacting with the Slurm Workload Manager from Jupyter notebook
 
 extra:
   recipe-maintainers:

@@ -5,11 +5,9 @@ Home: https://auneri.github.io/ipyslurm
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipyslurm-feedstock/blob/master/LICENSE.txt)
 
 Summary: IPython extension for interacting with the Slurm Workload Manager from Jupyter notebook
-
-
 
 Current build status
 ====================
