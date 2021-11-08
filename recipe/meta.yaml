@@ -1,6 +1,6 @@
 {% set name = "ipyslurm" %}
-{% set version = "1.6.0" %}
-{% set hash = "b6f35be39517da1b059a18980d306295e1a0d45ade94fc0ac8d7bd20e1a8596a" %}
+{% set version = "2.0.0" %}
+{% set hash = "ada5ddccf6493e98c96add3d0949979cd584a7874b306b5e31abec1233d25820" %}
 
 package:
   name: {{ name|lower }}
