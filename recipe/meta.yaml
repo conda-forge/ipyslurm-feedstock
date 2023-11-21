@@ -1,6 +1,5 @@
 {% set name = "ipyslurm" %}
 {% set version = "2.2.0" %}
-{% set hash = "2211c9a0367660344d36ce0eef911229c9cfb3c4cdf2a82d5b5a9d373006dc23" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  sha256: 2211c9a0367660344d36ce0eef911229c9cfb3c4cdf2a82d5b5a9d373006dc23
 
 build:
   noarch: python
