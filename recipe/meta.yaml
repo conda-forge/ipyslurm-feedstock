@@ -1,20 +1,18 @@
 {% set name = "ipyslurm" %}
-{% set version = "2.1.0" %}
-{% set hash = "27870c31844e2e50e635a6e4ff4e6fd7df3b56d5da0292861751cefa05dd6395" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  sha256: 2211c9a0367660344d36ce0eef911229c9cfb3c4cdf2a82d5b5a9d373006dc23
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -22,7 +20,6 @@ requirements:
     - python >=3.7
   run:
     - ipython >=7
-    - ipywidgets >=7
     - paramiko >=2.5
     - python >=3.7
     - tqdm >=4
