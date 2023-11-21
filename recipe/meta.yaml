@@ -7,14 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -22,7 +21,6 @@ requirements:
     - python >=3.7
   run:
     - ipython >=7
-    - ipywidgets >=7
     - paramiko >=2.5
     - python >=3.7
     - tqdm >=4
