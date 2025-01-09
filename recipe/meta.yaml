@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools >=64
   run:
     - ipython >=7
     - paramiko >=2.5
