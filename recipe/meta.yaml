@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2211c9a0367660344d36ce0eef911229c9cfb3c4cdf2a82d5b5a9d373006dc23
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - ipython >=7
     - paramiko >=2.5
-    - python >=3.7
+    - python >={{ python_min }}
     - tqdm >=4
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ipyslurm
 
