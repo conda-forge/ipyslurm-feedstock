@@ -1,5 +1,5 @@
 {% set name = "ipyslurm" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2211c9a0367660344d36ce0eef911229c9cfb3c4cdf2a82d5b5a9d373006dc23
+  sha256: 23cecce4d17d7268b7b9d2a597a9ce858f36a3bc6ee70b375d38c301d901b2c5
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
